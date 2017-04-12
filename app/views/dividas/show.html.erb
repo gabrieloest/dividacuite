@@ -1,0 +1,28 @@
+<div class="row-fluid">
+  <div class="span4 well">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Empresa:</strong>
+      <%= @divida.empresa_id %>
+    </p>
+
+    <p>
+      <strong>Cliente:</strong>
+      <%= @divida.cliente_id %>
+    </p>
+
+    <p>
+      <strong>Valor:</strong>
+      <%= @divida.valor %>
+    </p>
+
+    <p>
+      <strong>Flag:</strong>
+      <%= @divida.flag %>
+    </p>
+
+    <%= link_to 'Edit', edit_divida_path(@divida) %> |
+    <%= link_to 'Back', dividas_path %>
+  </div>
+</div>

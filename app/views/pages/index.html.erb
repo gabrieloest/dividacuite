@@ -1,0 +1,24 @@
+<div class="container">
+
+
+  <div class="row">
+    <h1>Clientes com Divida(s) Ativa(s)</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Empresa</th>
+          <th>Cliente</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @dividas.each do |divida| %>
+          <tr>
+            <td><%= divida.empresa.nome %></td>
+            <td><%= divida.cliente.nome %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

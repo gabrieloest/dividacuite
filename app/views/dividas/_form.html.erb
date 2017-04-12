@@ -1,0 +1,40 @@
+<div class="row-fluid">
+  <%= form_for @divida, :html => {:class => "form-horizontal"} do |f| %>
+    <% if divida.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(divida.errors.count, "error") %> prohibited this divida from being saved:</h2>
+
+        <ul>
+        <% divida.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :empresa_id, :class => "col-xs-3 col-form-label" %>
+      <%= f.number_field :empresa_id, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :cliente_id, :class => "col-xs-3 col-form-label" %>
+      <%= f.number_field :cliente_id, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :valor, :class => "col-xs-3 col-form-label" %>
+      <%= f.text_field :valor, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :flag, :class => "col-xs-3 col-form-label" %>
+      <%= f.check_box :flag, :class => "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit :class => "btn btn-primary" %>
+      <%= link_to 'Back', dividas_path, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
