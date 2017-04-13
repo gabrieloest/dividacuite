@@ -50,4 +50,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 
+gem 'bcrypt', platforms: :ruby
+
 gem 'devise'
