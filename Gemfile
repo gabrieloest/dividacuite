@@ -53,3 +53,13 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bcrypt', platforms: :ruby
 
 gem 'devise'
+
+# config/environments/production.rb
+config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+if ENV["RAILS_LOG_TO_STDOUT"].present?
+  logger           = ActiveSupport::Logger.new(STDOUT)
+  logger.formatter = config.log_formatter
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
+end
+
+ruby 2.3.3p222
