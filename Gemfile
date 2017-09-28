@@ -53,3 +53,5 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bcrypt', platforms: :ruby
 
 gem 'devise'
+
+ruby "2.3.3"

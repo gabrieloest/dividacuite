@@ -83,4 +83,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'dividacuite.herokuapp.com'}
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "dividacuite@gmail.com",
+    :password             => "nad7Cn7u",
+    :authentication       => "plain"
+    # :enable_starttls_auto => true # I don't have this, but it should work anyway
+  }
 end
