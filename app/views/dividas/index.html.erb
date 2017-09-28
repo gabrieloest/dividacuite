@@ -21,9 +21,9 @@
             <td><%= divida.cliente_id %></td>
             <td><%= divida.valor %></td>
             <td><%= divida.flag %></td>
-            <td><%= link_to 'Show', divida %></td>
-            <td><%= link_to 'Edit', edit_divida_path(divida) %></td>
-            <td><%= link_to 'Destroy', divida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Exibir', divida %></td>
+            <td><%= link_to 'Editar', edit_divida_path(divida) %></td>
+            <td><%= link_to 'Apagar', divida, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
           </tr>
         <% end %>
       </tbody>
@@ -31,6 +31,6 @@
 
     <br>
 
-    <%= link_to 'New Divida', new_divida_path %>
+    <%= link_to 'Nova Divida', new_divida_path %>
   </div>
 </div>
